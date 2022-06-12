@@ -2,15 +2,15 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        checkMonth1(2022);
-        checkMonth2(2, 2022);
-        int count_days = checkMonth3(45);
+        checkYear (2008);
+        checkPhone(2, 2022);
+        int count_days = checkPatch(45);
         System.out.println("На доставку вам надо " + count_days);
 
 
     }
 
-    public static void checkMonth1(int year) {
+    public static void checkYear(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
             System.out.println(year + " высокосный");
         else
@@ -18,7 +18,7 @@ public class Main {
 
     }
 
-    public static void checkMonth2(int oc, int year) {
+    public static void checkPhone(int oc, int year) {
         int currentYear = LocalDate.now().getYear();
 
         if (oc == 0 && year >= currentYear)
@@ -31,7 +31,7 @@ public class Main {
             System.out.println(" Я не знаю какая у вас операционная система");
     }
 
-    public static int checkMonth3(int distance) {
+    public static int checkPatch(int distance) {
         int days = 0;
         if (distance >= 0 && distance < 40)
             days += 1;
